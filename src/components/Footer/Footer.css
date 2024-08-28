@@ -1,0 +1,74 @@
+/* Footer Section */
+.Footer {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 0 -4px 8px rgba(120, 120, 120, 0.1);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Footer Text */
+.Footer-text {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Footer Links */
+.Footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Footer Link */
+.Footer-link {
+  display: inline-block;
+  color: orange;
+  transition: color 0.3s ease;
+}
+.Footer-icon {
+  width: 30px; /* Size of the circle */
+  height: 30px; /* Size of the circle */
+  border-radius: 50%; /* Circular shape */
+  margin-top: 1rem; /* Space above the icon */
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Centering vertically */
+  justify-content: center; /* Centering horizontally */
+  overflow: hidden; /* Hide overflow if needed */
+  padding: 6px;
+}
+.Footer-icon img{
+  width: 100%; /* Scale image to fill container */
+  height: 100%; /* Scale image to fill container */
+  object-fit: contain; /* Ensure the entire icon is visible */
+}
+.Footer-icon:hover{
+  box-shadow: 0 0 5px 5px orange;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+  .Footer-text {
+    font-size: 0.9rem;
+  }
+
+  .Footer-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Footer-text {
+    font-size: 0.8rem;
+  }
+
+  .Footer-icon {
+    width: 18px;
+    height: 18px;
+  }
+}

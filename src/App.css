@@ -1,0 +1,12 @@
+/* App Container */
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full viewport height */
+  }
+  
+  /* Main Content */
+  .App-main {
+    flex: 1; /* Allow main content to expand */
+  }
+  

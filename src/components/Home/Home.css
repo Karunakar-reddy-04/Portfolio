@@ -1,0 +1,133 @@
+/* Home Section */
+.Home-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  min-height: calc(100vh - 4rem); /* Adjust to fit viewport height minus header and footer height */
+  padding: 1rem;
+  margin-top: 0;
+  background: linear-gradient(to bottom right, #000, #333); /* Optional background gradient */
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Profile Image */
+.Home-profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid orange;
+  object-fit: cover;
+  margin-bottom: 1rem; /* Increased margin for better spacing */
+}
+
+/* Title */
+.Home-title {
+  font-size: 2rem;
+  margin: 1rem 0;
+  font-weight: bold;
+  overflow: hidden; /* Ensures text does not overflow during animation */
+  white-space: nowrap; /* Keeps the text on a single line */
+  border-right: 2px solid orange; /* Creates the cursor effect */
+  width: 0; /* Initial width to make text appear to type out */
+  animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite; /* Apply typewriter and blinking cursor effects */
+}
+
+/* Description */
+.Home-description {
+  font-size: 1rem;
+  color: gray;
+  max-width: 600px;
+  margin-bottom: 1rem; /* Adds spacing between description and CTA */
+}
+
+/* CTA Button */
+.Home-cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: orange;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  opacity: 1; /* Ensure button is visible */
+  animation: fadeIn 1s ease forwards; /* Animation to fade in */
+  animation-delay: 4s; /* Delay to match the typewriter effect */
+  margin-top: 1rem; /* Ensure spacing from other elements */
+}
+
+/* Glowing Animation */
+@keyframes glow {
+  0% { box-shadow: 0 0 5px orange; }
+  50% { box-shadow: 0 0 20px orange; }
+  100% { box-shadow: 0 0 5px orange; }
+}
+
+/* Shaking Animation */
+@keyframes shake {
+  0% { transform: translateX(-10px); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+/* Apply Glowing Effect */
+.Home-cta-button.glow {
+  animation: glow 1.5s ease-in-out infinite; /* Apply glow effect */
+}
+
+/* Optional: Apply Shaking Effect */
+.Home-cta-button.shake {
+  animation: shake 0.5s ease-in-out; /* Apply shake effect */
+}
+
+/* Keyframes for typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Keyframes for blinking cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+/* Keyframes for fading in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .Home-title {
+    font-size: 1.5rem;
+  }
+
+  .Home-cta-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Home-title {
+    font-size: 1.25rem;
+  }
+
+  .Home-profile-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .Home-cta-button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}
